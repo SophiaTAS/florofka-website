@@ -1,0 +1,661 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenue
+{% endblock %}
+
+{% block body %}
+	<!-- ======= Hero Section ======= -->
+	<section id="hero" class="hero">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-md-12">
+					<a class="hero-brand" href="{{ path('app_site') }}" title="Home">
+						<img alt="Florofka Logo" src="{{ asset('assets/img/logo2.png') }}">
+						Les fleurs de Florofka
+					</a>
+					<div class="horizontal-line"></div>
+					<div class="vertical-line"></div>
+				</div>
+			</div>
+
+			<div class="col-md-12 global-hero">
+				<div class="hero-title col-md-6">
+                    <div class="card-big-shadow-hero">
+                        <div class="card card-just-text card-hero" data-background="color" data-color="blue" data-radius="none">
+                            <div class="content">
+                                <h1>
+                                    Florofka
+                                </h1>
+                                <p class="tagline">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam ad architecto porro, iure cum necessitatibus at, earum quam perferendis vero et explicabo dolorem voluptas laudantium, qui cupiditate harum provident repellendus?
+                                </p>
+                                <a class="btn btn-full scrollto" href="#about">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<div class="hero-img col-md-6 row-sm-12">
+					<div id="carousel-hero" class="carousel slide carousel-fade" data-bs-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="{{ asset('assets/img/compo-haute.jpg') }}" class="w-100" alt="compo-haute">
+							</div>
+							<div class="carousel-item">
+								<img src="{{ asset('assets/img/compo-exotic.jpg') }}" class="w-100" alt="compo-exotic">
+							</div>
+							<div class="carousel-item">
+								<img src="{{ asset('assets/img/suspension-mariage.jpg') }}" class="w-100" alt="suspension-mariage">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<!-- End Hero -->
+
+	<!-- ======= Header ======= -->
+	<header id="header" class="d-flex align-items-center">
+		<div class="container d-flex align-items-center">
+
+			<div id="logo" class="me-auto">
+				<a href="{{ path('app_site') }}"><img src="{{ asset('assets/img/logo2.png') }}" alt="">Les fleurs de Florofka
+				</a>
+				<!-- Uncomment below if you prefer to use a text image -->
+				<!--<h1><a href="#hero">Bell</a></h1>-->
+			</div>
+
+			<nav id="navbar" class="navbar order-last order-lg-0">
+				<ul>
+					<li>
+						<a class="nav-link scrollto active" href="#hero">Accueil</a>
+					</li>
+					<li>
+						<a class="nav-link scrollto" href="#about">A propos</a>
+					</li>
+					{# <li>
+						<a class="nav-link scrollto" href="#features">Features</a>
+					</li> #}
+					<li>
+						<a class="nav-link scrollto " href="#portfolio">Galerie</a>
+					</li>
+					<li>
+						<a class="nav-link scrollto" href="#contact">Contact</a>
+					</li>
+				</ul>
+				<i class="bi bi-list mobile-nav-toggle"></i>
+			</nav>
+			<!-- .navbar -->
+
+			<div class="header-social-links d-flex align-items-center">
+				<a href="#" class="facebook">
+					<i class="bi bi-facebook"></i>
+				</a>
+				<a href="#" class="instagram">
+					<i class="bi bi-instagram"></i>
+				</a>
+				<a href="#" class="linkedin">
+					<i class="bi bi-linkedin"></i>
+				</i>
+			</a>
+		</div>
+	</div>
+</header>
+<!-- End Header -->
+
+<main
+	id="main">
+
+	<!-- ======= About Section ======= -->
+	<section class="about" id="about">
+
+		<div class="container text-center">
+			<h2>
+				A propos de Florofka
+			</h2>
+			<div class="card-group vgr-cards">
+				<div class="card card-about">
+					<div class="card-img-body">
+						<img class="card-img" src="{{ asset('assets/img/bouquet-rond-card.jpg') }}" alt="Card image cap"></div>
+					<div class="card-body">
+						<h4 class="card-title">Une formation solide:
+						</h4>
+						<p class="card-text">
+							Voluptua scripserit per ad, laudem viderer sit ex. Ex alia corrumpit voluptatibus usu, sed unum convenire id. Ut cum nisl moderatius, per nihil dicant commodo an. Eum tacimates erroribus ad. Atqui feugiat euripidis ea pri, sed veniam tacimates ex. Menandri
+																								          temporibus an duo.
+						</p>
+						<p class="card-text">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo sed recusandae, vel, aspernatur reiciendis perspiciatis dicta quod perferendis, laudantium ad doloribus blanditiis fugiat sint. Amet laboriosam dolores saepe ut quae.
+											                Dolorum impedit, cupiditate incidunt cumque doloremque nisi sed omnis magni fuga, natus, dicta in corrupti eius veniam ratione expedita deleniti tempora. Dolores quae sunt dolore aperiam rem eos inventore perspiciatis.
+						</p>
+					</div>
+				</div>
+				<div class="card card-about">
+					<div class="card-img-body">
+						<img class="card-img" src="{{ asset('assets/img/bouquet-rond-card.jpg') }}" alt="Card image cap"></div>
+					<div class="card-body">
+						<h4 class="card-title">Un travaille sous un angle different:
+						</h4>
+						<p class="card-text">
+							Voluptua scripserit per ad, laudem viderer sit ex. Ex alia corrumpit voluptatibus usu, sed unum convenire id. Ut cum nisl moderatius, per nihil dicant commodo an. Eum tacimates erroribus ad. Atqui feugiat euripidis ea pri, sed veniam tacimates ex. Menandri
+																								          temporibus an duo.
+						</p>
+						<p class="card-text">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo sed recusandae, vel, aspernatur reiciendis perspiciatis dicta quod perferendis, laudantium ad doloribus blanditiis fugiat sint. Amet laboriosam dolores saepe ut quae.
+											                Dolorum impedit, cupiditate incidunt cumque doloremque nisi sed omnis magni fuga, natus, dicta in corrupti eius veniam ratione expedita deleniti tempora. Dolores quae sunt dolore aperiam rem eos inventore perspiciatis.
+						</p>
+
+					</div>
+				</div>
+				<a href="#portfolio" class="btn btn-card">Mes créations</a>
+			</div>
+		</div>
+
+	</section>
+	<!-- End About Section -->
+
+	<!-- ======= Welcome Section ======= -->
+	<section class="welcome text-center">
+		<h2>Les fleurs de florofka</h2>
+		<p>
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum officia possimus amet voluptatibus voluptate, sint iusto itaque facilis quis?
+		</p>
+        <div class="container bootstrap snippets bootdeys">
+		<div class="row">
+			<div class="col-md-4 col-sm-6 content-card">
+				<div class="card-big-shadow">
+					<div class="card card-just-text card-welcome" data-background="color" data-color="blue" data-radius="none">
+						<div class="content">
+							{# <h6 class="category">Best cards</h6> #}
+							<h4 class="title">
+								<a href="#contact">Evénements professionnels</a>
+							</h4>
+							<p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium iure omnis mollitia temporibus, eaque placeat dolorum iste ea tempore, commodi recusandae debitis, ut eveniet beatae quidem soluta cum nulla itaque?
+							</p>
+						</div>
+					</div>
+					<!-- end card -->
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-6 content-card">
+				<div class="card-big-shadow">
+					<div class="card card-just-text card-welcome" data-background="color" data-color="green" data-radius="none">
+						<div class="content">
+							{# <h6 class="category">Best cards</h6> #}
+							<h4 class="title">
+								<a href="#contact">Evénements festifs</a>
+							</h4>
+							<p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, perspiciatis dolore quis odio dicta culpa. Voluptates eaque accusamus enim omnis architecto, deserunt cum praesentium possimus dolorum, cumque, blanditiis unde non!
+							</p>
+						</div>
+					</div>
+					<!-- end card -->
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-6 content-card">
+				<div class="card-big-shadow">
+					<div class="card card-just-text card-welcome" data-background="color" data-color="yellow" data-radius="none">
+						<div class="content">
+							{# <h6 class="category">Best cards</h6> #}
+							<h4 class="title">
+								<a href="#contact">Deuil</a>
+							</h4>
+							<p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam eum magnam porro assumenda, ipsa rerum quisquam labore corrupti, ullam sed fuga autem animi? Cum iste exercitationem, consequatur aliquid eveniet id?
+							</p>
+						</div>
+					</div>
+					<!-- end card -->
+				</div>
+			</div>
+        </div>
+        </div>
+
+		</section>
+		<!-- End Welcome Section -->
+
+		<!-- ======= Features Section ======= -->
+		{# <section class="features" id="features">
+
+			<div class="container">
+				<h2 class="text-center">
+					Features
+				</h2>
+
+				<div class="row">
+					<div class="feature-col col-lg-4 col-xs-12">
+						<div class="card card-block text-center">
+							<div>
+								<div class="feature-icon">
+									<i class="bi bi-briefcase"></i>
+								</div>
+							</div>
+
+							<div>
+								<h3>
+									Custom Design
+								</h3>
+
+								<p>
+									Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="feature-col col-lg-4 col-xs-12">
+						<div class="card card-block text-center">
+							<div>
+								<div class="feature-icon">
+									<i class="bi bi-card-checklist"></i>
+								</div>
+							</div>
+
+							<div>
+								<h3>
+									Responsive Layout
+								</h3>
+
+								<p>
+									Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="feature-col col-lg-4 col-xs-12">
+						<div class="card card-block text-center">
+							<div>
+								<div class="feature-icon">
+									<i class="bi bi-bar-chart"></i>
+								</div>
+							</div>
+
+							<div>
+								<h3>
+									Innovative Ideas
+								</h3>
+
+								<p>
+									Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="feature-col col-lg-4 col-xs-12">
+						<div class="card card-block text-center">
+							<div>
+								<div class="feature-icon">
+									<i class="bi bi-binoculars"></i>
+								</div>
+							</div>
+
+							<div>
+								<h3>
+									Good Documentation
+								</h3>
+
+								<p>
+									Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="feature-col col-lg-4 col-xs-12">
+						<div class="card card-block text-center">
+							<div>
+								<div class="feature-icon">
+									<i class="bi bi-brightness-high"></i>
+								</div>
+							</div>
+
+							<div>
+								<h3>
+									Excellent Features
+								</h3>
+
+								<p>
+									Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="feature-col col-lg-4 col-xs-12">
+						<div class="card card-block text-center">
+							<div>
+								<div class="feature-icon">
+									<i class="bi bi-calendar4-week"></i>
+								</div>
+							</div>
+
+							<div>
+								<h3>
+									Retina Ready
+								</h3>
+								<p>
+									Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section> #}
+		<!-- End Features Section -->
+
+		<!-- ======= Call to Action Section ======= -->
+		<section class="cta">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-9 col-sm-12 text-lg-start text-center">
+						<h2>
+							Un projet? Un événement? Parlons-en!
+						</h2>
+
+						<p>
+							Lorem ipsum dolor sit amet, nec ad nisl mandamus imperdiet, ut corpora cotidieque cum. Et brute iracundia his, est eu idque dictas gubergren
+						</p>
+					</div>
+
+					<div class="col-lg-3 col-sm-12 text-lg-right text-center">
+						<a class="btn btn-ghost" href="#contact">Contactez moi</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Call to Action Section -->
+
+		<!-- ======= Portfolio Section ======= -->
+		<section class="portfolio" id="portfolio">
+
+			<div class="container text-center">
+				<h2>
+					Galerie
+				</h2>
+
+				<p>
+					Voluptua scripserit per ad, laudem viderer sit ex. Ex alia corrumpit voluptatibus usu, sed unum convenire id. Ut cum nisl moderatius, Per nihil dicant commodo an.
+				</p>
+			</div>
+
+			<div class="portfolio-grid">
+				<div class="row">
+					<div class="col-lg-3 col-sm-6 col-xs-12">
+						<div class="card card-block">
+							<a href="{{ asset('assets/img/bouquet-rond-card.jpg') }}" class="portfolio-lightbox" data-gallery="portfolioGallery">
+                                <img class="galerie-img" alt="" src="{{ asset('assets/img/bouquet-rond-card.jpg') }}">
+								<div class="portfolio-over">
+									<div>
+										<h3 class="card-title">
+											Mariage
+										</h3>
+
+										<p class="card-text">
+											Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6 col-xs-12">
+						<div class="card card-block">
+							<a href="{{ asset('assets/img/mariage-img.jpg') }}" class="portfolio-lightbox" data-gallery="portfolioGallery"><img class="galerie-img" alt="" src="{{ asset('assets/img/mariage-img.jpg') }}">
+								<div class="portfolio-over">
+									<div>
+										<h3 class="card-title">
+											Mariage
+										</h3>
+
+										<p class="card-text">
+											Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6 col-xs-12">
+						<div class="card card-block">
+							<a href="{{ asset('assets/img/mariage-img2.jpg') }}" class="portfolio-lightbox" data-gallery="portfolioGallery"><img class="galerie-img" alt="" src="{{ asset('assets/img/mariage-img2.jpg') }}">
+								<div class="portfolio-over">
+									<div>
+										<h3 class="card-title">
+											Mariage
+										</h3>
+
+										<p class="card-text">
+											Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6 col-xs-12">
+						<div class="card card-block">
+							<a href="{{ asset('assets/img/deuil-img.jpg') }}" class="portfolio-lightbox" data-gallery="portfolioGallery"><img class="galerie-img" alt="" src="{{ asset('assets/img/deuil-img.jpg') }}">
+								<div class="portfolio-over">
+									<div>
+										<h3 class="card-title">
+											Deuil
+										</h3>
+
+										<p class="card-text">
+											Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-3 col-sm-6 col-xs-12">
+						<div class="card card-block">
+							<a href="assets/img/porf-5.jpg" class="portfolio-lightbox" data-gallery="portfolioGallery"><img class="galerie-img" alt="" src="assets/img/porf-5.jpg">
+								<div class="portfolio-over">
+									<div>
+										<h3 class="card-title">
+											The Dude Rockin'
+										</h3>
+
+										<p class="card-text">
+											Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6 col-xs-12">
+						<div class="card card-block">
+							<a href="assets/img/porf-6.jpg" class="portfolio-lightbox" data-gallery="portfolioGallery"><img class="galerie-img" alt="" src="assets/img/porf-6.jpg">
+								<div class="portfolio-over">
+									<div>
+										<h3 class="card-title">
+											The Dude Rockin'
+										</h3>
+
+										<p class="card-text">
+											Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6 col-xs-12">
+						<div class="card card-block">
+							<a href="assets/img/porf-7.jpg" class="portfolio-lightbox" data-gallery="portfolioGallery"><img class="galerie-img" alt="" src="assets/img/porf-7.jpg">
+								<div class="portfolio-over">
+									<div>
+										<h3 class="card-title">
+											The Dude Rockin'
+										</h3>
+
+										<p class="card-text">
+											Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6 col-xs-12">
+						<div class="card card-block">
+							<a href="assets/img/porf-8.jpg" class="portfolio-lightbox" data-gallery="portfolioGallery"><img class="galerie-img" alt="" src="assets/img/porf-8.jpg">
+								<div class="portfolio-over">
+									<div>
+										<h3 class="card-title">
+											The Dude Rockin'
+										</h3>
+
+										<p class="card-text">
+											Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Portfolio Section -->
+
+		<!-- ======= Contact Section ======= -->
+		<section id="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h2 class="section-title">Contactez moi</h2>
+					</div>
+				</div>
+
+				<div class="row justify-content-center">
+					<div class="col-lg-3 col-md-4">
+						<div class="info">
+							<div>
+								<i class="bi bi-geo-alt"></i>
+								<p>A108 Adam Street<br>New York, NY 535022</p>
+							</div>
+
+							<div>
+								<i class="bi bi-envelope"></i>
+								<p>info@example.com</p>
+							</div>
+
+							<div>
+								<i class="bi bi-phone"></i>
+								<p>+1 5589 55488 55s</p>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="col-lg-5 col-md-8">
+						<div class="form">
+							<form action="forms/contact.php" method="post" role="form" class="php-email-form">
+								<div class="form-group">
+									<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+								</div>
+								<div class="form-group mt-3">
+									<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+								</div>
+								<div class="form-group mt-3">
+									<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+								</div>
+								<div class="form-group mt-3">
+									<textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+								</div>
+								<div class="my-3">
+									<div class="loading">Loading</div>
+									<div class="error-message"></div>
+									<div class="sent-message">Your message has been sent. Thank you!</div>
+								</div>
+								<div class="text-center">
+									<button class="btn" type="submit">Send Message</button>
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- End Contact Section -->
+
+	</main>
+	<!-- End #main -->
+
+	<!-- ======= Footer ======= -->
+	<footer class="site-footer">
+		<div class="bottom">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-6 col-xs-12 text-lg-start text-center">
+						<p class="copyright-text">
+							&copy; Copiedroit
+							<strong>Sophia Tassotti</strong>. All Rights Reserved
+						</p>
+						<div class="credits">
+							Designed by
+							<a href="https://sophiadwwm.com/" target="_blank">Sophia Tassotti</a>
+						</div>
+					</div>
+
+					<div class="col-lg-6 col-xs-12 text-lg-right text-center">
+						<ul class="list-inline">
+							<li class="list-inline-item">
+								<a href="index.html">Accueil</a>
+							</li>
+
+							<li class="list-inline-item">
+								<a href="#about">A propos</a>
+							</li>
+
+							{# <li class="list-inline-item">
+								<a href="#features">Features</a>
+							</li> #}
+
+							<li class="list-inline-item">
+								<a href="#portfolio">Galerie</a>
+							</li>
+
+							{# <li class="list-inline-item">
+								<a href="#team">Team</a>
+							</li> #}
+
+							<li class="list-inline-item">
+								<a href="#contact">Contact</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer -->
+
+	<a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+		<i class="bi bi-arrow-up-short"></i>
+	</a>
+{% endblock %}
