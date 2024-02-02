@@ -8,11 +8,15 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class SiteController extends AbstractController
 {
-    #[Route('/site', name: 'app_site')]
+    #[Route('/', name: 'app_site')]
     public function index(): Response
     {
-        return $this->render('site/index.html.twig', [
-            'controller_name' => 'SiteController',
-        ]);
+        return $this->render('site/index.html.twig');
+    }
+
+    #[Route('/galerie', name: 'app_site_portfolio')]
+    public function showPortfolio(): Response
+    {
+        return $this->render('site/portfolio.html.twig');
     }
 }
