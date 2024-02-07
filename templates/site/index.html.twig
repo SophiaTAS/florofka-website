@@ -386,92 +386,87 @@
 				<p>
 					Voluptua scripserit per ad, laudem viderer sit ex. Ex alia corrumpit voluptatibus usu, sed unum convenire id. Ut cum nisl moderatius, Per nihil dicant commodo an.
 				</p>
+				<a href="{{ path('app_site_portfolio') }}" class="btn btn-card">Voir toute la galerie</a>
 			</div>
 
 			<div class="portfolio-grid">
+			
 				<div class="row">
-					<div class="col-lg-3 col-sm-6 col-xs-12">
-						<div class="card card-block">
-							<a href="{{ asset('assets/img/bouquet-rond-card.jpg') }}" class="portfolio-lightbox" data-gallery="portfolioGallery">
-                                <img class="galerie-img" alt="" src="{{ asset('assets/img/bouquet-rond-card.jpg') }}">
-								<div class="portfolio-over">
-									<div>
-										<h3 class="card-title">
-											Mariage
-										</h3>
+				{% for image in galerie %}
+					{% if image.category is same as('Bouquet') %}
+						<div class="col-lg-3 col-sm-6 col-xs-12">
+							<div class="card card-block">
+								<a href="{{ asset('assets/img/galerie/' ~ image.name ) }}" class="portfolio-lightbox" data-gallery="portfolioGallery">
+									<img class="galerie-img" alt="" src="{{ asset('assets/img/galerie/' ~ image.name ) }}">
+									<div class="portfolio-over">
+										<div>
+											<h3 class="card-title">
+												{{ image.category }}
+											</h3>
 
-										<p class="card-text">
-											Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-										</p>
+											<p class="card-text">
+												Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+											</p>
+										</div>
 									</div>
-								</div>
-							</a>
+								</a>
+							</div>
 						</div>
-					</div>
+					{% endif %}
+					{% if image.category is same as('Composition') %}
+						<div class="col-lg-3 col-sm-6 col-xs-12">
+							<div class="card card-block">
+								<a href="{{ asset('assets/img/galerie/' ~ image.name ) }}" class="portfolio-lightbox" data-gallery="portfolioGallery">
+								<img class="galerie-img" alt="" src="{{ asset('assets/img/galerie/' ~ image.name ) }}">
+									<div class="portfolio-over">
+										<div>
+											<h3 class="card-title">
+												{{ image.category }}
+											</h3>
 
-					<div class="col-lg-3 col-sm-6 col-xs-12">
-						<div class="card card-block">
-							<a href="{{ asset('assets/img/mariage-img.jpg') }}" class="portfolio-lightbox" data-gallery="portfolioGallery"><img class="galerie-img" alt="" src="{{ asset('assets/img/mariage-img.jpg') }}">
-								<div class="portfolio-over">
-									<div>
-										<h3 class="card-title">
-											Mariage
-										</h3>
-
-										<p class="card-text">
-											Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-										</p>
+											<p class="card-text">
+												Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+											</p>
+										</div>
 									</div>
-								</div>
-							</a>
+								</a>
+							</div>
 						</div>
-					</div>
-
-					<div class="col-lg-3 col-sm-6 col-xs-12">
-						<div class="card card-block">
-							<a href="{{ asset('assets/img/mariage-img2.jpg') }}" class="portfolio-lightbox" data-gallery="portfolioGallery"><img class="galerie-img" alt="" src="{{ asset('assets/img/mariage-img2.jpg') }}">
-								<div class="portfolio-over">
-									<div>
-										<h3 class="card-title">
-											Mariage
-										</h3>
-
-										<p class="card-text">
-											Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-										</p>
-									</div>
-								</div>
-							</a>
-						</div>
-					</div>
-
-					<div class="col-lg-3 col-sm-6 col-xs-12">
-						<div class="card card-block">
-							<a href="{{ asset('assets/img/deuil-img.jpg') }}" class="portfolio-lightbox" data-gallery="portfolioGallery"><img class="galerie-img" alt="" src="{{ asset('assets/img/deuil-img.jpg') }}">
-								<div class="portfolio-over">
-									<div>
-										<h3 class="card-title">
-											Deuil
-										</h3>
-
-										<p class="card-text">
-											Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-										</p>
-									</div>
-								</div>
-							</a>
-						</div>
-					</div>
+					{% endif %}
+				{% endfor %}
 				</div>
 
 				<div class="row">
+				{% for image in galerie %}
+					{% if image.category is same as('Mariage') %}
+						<div class="col-lg-3 col-sm-6 col-xs-12">
+							<div class="card card-block">
+								<a href="{{ asset('assets/img/galerie/' ~ image.name ) }}" class="portfolio-lightbox" data-gallery="portfolioGallery">
+								<img class="galerie-img" alt="" src="{{ asset('assets/img/galerie/' ~ image.name ) }}">
+									<div class="portfolio-over">
+										<div>
+											<h3 class="card-title">
+												{{ image.category }}
+											</h3>
+
+											<p class="card-text">
+												Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+											</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					{% endif %}
+					{% if image.category is same as('Hommage') %}
 					<div class="col-lg-3 col-sm-6 col-xs-12">
 						<div class="card card-block">
-							<a href="assets/img/porf-5.jpg" class="portfolio-lightbox" data-gallery="portfolioGallery"><img class="galerie-img" alt="" src="assets/img/porf-5.jpg">
+							<a href="{{ asset('assets/img/galerie/' ~ image.name ) }}" class="portfolio-lightbox" data-gallery="portfolioGallery">
+							<img class="galerie-img" alt="" src="{{ asset('assets/img/galerie/' ~ image.name ) }}">
 								<div class="portfolio-over">
 									<div>
 										<h3 class="card-title">
-											The Dude Rockin'
+											{{ image.category }}
 										</h3>
 
 										<p class="card-text">
@@ -482,63 +477,12 @@
 							</a>
 						</div>
 					</div>
-
-					<div class="col-lg-3 col-sm-6 col-xs-12">
-						<div class="card card-block">
-							<a href="assets/img/porf-6.jpg" class="portfolio-lightbox" data-gallery="portfolioGallery"><img class="galerie-img" alt="" src="assets/img/porf-6.jpg">
-								<div class="portfolio-over">
-									<div>
-										<h3 class="card-title">
-											The Dude Rockin'
-										</h3>
-
-										<p class="card-text">
-											Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-										</p>
-									</div>
-								</div>
-							</a>
-						</div>
-					</div>
-
-					<div class="col-lg-3 col-sm-6 col-xs-12">
-						<div class="card card-block">
-							<a href="assets/img/porf-7.jpg" class="portfolio-lightbox" data-gallery="portfolioGallery"><img class="galerie-img" alt="" src="assets/img/porf-7.jpg">
-								<div class="portfolio-over">
-									<div>
-										<h3 class="card-title">
-											The Dude Rockin'
-										</h3>
-
-										<p class="card-text">
-											Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-										</p>
-									</div>
-								</div>
-							</a>
-						</div>
-					</div>
-
-					<div class="col-lg-3 col-sm-6 col-xs-12">
-						<div class="card card-block">
-							<a href="assets/img/porf-8.jpg" class="portfolio-lightbox" data-gallery="portfolioGallery"><img class="galerie-img" alt="" src="assets/img/porf-8.jpg">
-								<div class="portfolio-over">
-									<div>
-										<h3 class="card-title">
-											The Dude Rockin'
-										</h3>
-
-										<p class="card-text">
-											Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-										</p>
-									</div>
-								</div>
-							</a>
-						</div>
-					</div>
+					{% endif %}
+				{% endfor %}
 				</div>
 			</div>
 		</section>
+
 		<!-- End Portfolio Section -->
 
 		<!-- ======= Contact Section ======= -->

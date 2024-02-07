@@ -8,7 +8,6 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\UX\Dropzone\Form\DropzoneType;
 
 class GalleryPicsType extends AbstractType
 {
@@ -26,12 +25,16 @@ class GalleryPicsType extends AbstractType
                 'placeholder' => 'Sélectionner une catégorie', // Texte par défaut (optionnel)
                 'required' => true,
                 'attr' => [
-                    'class' => 'form-select' // Utilisez la classe Bootstrap 'form-select' pour styliser la balise de sélection
+                    'class' => 'form-select mt-3 mb-3 ms-3 me-3' // Utilisez la classe Bootstrap 'form-select' pour styliser la balise de sélection
                 ],
             ])
-            ->add('name', DropzoneType::class,  [
+            ->add('name', FileType::class,  [
+                'label' => 'Selectionner une ou plusieurs images',
+                'multiple' => true,
+                'required' => false,
+                'mapped' => false,
                 'attr' => [
-                    'placeholder' => 'Deposer une ou plusieurs images ou cliquer pour rechercher'
+                    'class' => 'form-control mt-3 mb-3 ms-3 me-3'
                 ]
             ])
         ;

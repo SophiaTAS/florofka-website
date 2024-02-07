@@ -21,6 +21,27 @@ class GalleryPicsRepository extends ServiceEntityRepository
         parent::__construct($registry, GalleryPics::class);
     }
 
+    public function findTwoPerCategory(): array
+    {
+        $categories = ["Bouquet", "Composition", "Mariage", "Hommage"];
+        
+        $qb = $this->createQueryBuilder('gp');
+
+        $results = [];
+        foreach ($categories as $category) {
+            $results = array_merge(
+                $results,
+                $qb->andWhere('gp.category = :category')
+                    ->setParameter('category', $category)
+                    ->setMaxResults(2)
+                    ->getQuery()
+                    ->getResult()
+            );
+        }
+
+        return $results;
+    }
+
 //    /**
 //     * @return GalleryPics[] Returns an array of GalleryPics objects
 //     */
