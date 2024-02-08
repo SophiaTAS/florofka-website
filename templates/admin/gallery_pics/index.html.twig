@@ -1,0 +1,40 @@
+{% extends 'admin/base_admin.html.twig' %}
+
+{% block title %}GalleryPics index{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1 class="text-center my-3">GalleryPics index</h1>
+
+    <a href="{{ path('app_gallery_pics_new') }}" class="btn mt-3 mb-3 ms-3">Create new</a>
+
+    <table class="table container-fluid">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Category</th>
+                <th>Name</th>
+                <th>pics</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for gallery_pic in gallery_pics %}
+            <tr>
+                <td>{{ gallery_pic.id }}</td>
+                <td>{{ gallery_pic.category }}</td>
+                <td>{{ gallery_pic.name }}</td>
+                <td><img class=" d-block w-25" alt="" src="{{ asset('assets/img/galerie/mini/400x250-' ~ gallery_pic.name ) }}" /></td>
+                <td>
+                    <a href="{{ path('app_gallery_pics_show', {'id': gallery_pic.id}) }}" class="btn mt-3 mb-3 ms-3">show</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

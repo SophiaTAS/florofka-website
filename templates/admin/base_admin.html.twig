@@ -45,7 +45,10 @@
 		{# {% block importmap %}{{ importmap('app') }}{% endblock %} #}{% endblock %}
 	</head>
 	<body>
+		{% include "admin/_admin_partials/_nav_admin.html.twig" %}
+		{% include "admin/_admin_partials/_flash.html.twig" %}
 		{% block body %}
+		
         {% endblock %}
 	</body>
 
