@@ -15,6 +15,14 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/admin')]
 class GalleryPicsController extends AbstractController
 {
+    #[Route('/', name: 'app_admin')]
+    public function adminIndex(): Response
+    {
+        $this->denyAccessUnlessGranted("ROLE_ADMIN");
+
+        return $this->render('admin/index.html.twig');
+    }
+
     #[Route('/galerie/pics', name: 'app_gallery_pics_index', methods: ['GET'])]
     public function index(GalleryPicsRepository $galleryPicsRepository): Response
     {

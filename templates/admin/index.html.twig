@@ -1,0 +1,14 @@
+{% extends 'admin/base_admin.html.twig' %}
+
+{% block title %}Administration{% endblock %}
+
+{% block body %}
+<div class="container">
+    {% include "admin/_admin_partials/_flash.html.twig" %}
+    <h1 class="text-center mt-3 mb-3">Accueil administration</h1>
+    <h3 class="text-center mt-3 mb-3">Bienvenue {{ app.user.firstname }} {{ app.user.lastname }} </h3>
+
+    <h4 class="text-center"><i class="fa-solid fa-right-long my-3 mx-3"></i><a href="{{ path('app_gallery_pics_index') }}" class="my-3 mx-3">Gestion de la galerie d'images</a></h4>
+
+</div>
+{% endblock %}

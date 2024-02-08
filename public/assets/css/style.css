@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'titre';
-  src: url('../fonts/GreatVibes-Regular.ttf');
+  src: url('../fonts/MrsSaintDelafield-Regular.ttf');
 }
 
 @font-face {
@@ -35,7 +35,7 @@ h1 {
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 60px;
   margin-bottom: 65px;
   font-family: 'titre', Times, serif;
 }

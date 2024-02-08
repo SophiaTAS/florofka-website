@@ -1,11 +1,10 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin/base_admin.html.twig' %}
 
 {% block title %}GalleryPics index{% endblock %}
 
 {% block body %}
 <div class="container">
-    {% include "admin/_admin_partials/_flash.html.twig" %}
-    <h1 class="text-center mt-3 mb-3">GalleryPics index</h1>
+    <h1 class="text-center my-3">GalleryPics index</h1>
 
     <a href="{{ path('app_gallery_pics_new') }}" class="btn mt-3 mb-3 ms-3">Create new</a>
 

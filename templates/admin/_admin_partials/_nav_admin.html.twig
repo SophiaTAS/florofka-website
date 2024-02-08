@@ -1,0 +1,37 @@
+<header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+        <div id="logo" class="me-auto">
+            <a href="{{ path('app_site') }}"><img src="{{ asset('assets/img/logo2.png') }}" alt="">Les fleurs de Florofka
+            </a>
+            <!-- Uncomment below if you prefer to use a text image -->
+            <!--<h1><a href="#hero">Bell</a></h1>-->
+        </div>
+
+        <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+                <li>
+                    <a class="nav-link scrollto active" href="{{ path('app_admin') }}">Accueil administration</a>
+                </li>
+                <li class="nav-item dropdown col-3">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						{{ app.user.firstname }} {{ app.user.lastname }}
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a class="dropdown-item" href="{{ path('app_gallery_pics_index') }}">Gestion galerie</a>
+						</li>
+						{# <li>
+							<a class="dropdown-item" href="#">Another action</a>
+						</li>
+						<li><hr class="dropdown-divider"></li>
+						<li>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</li> #}
+					</ul>
+				</li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+	</div>
+</header>
