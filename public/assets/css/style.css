@@ -437,6 +437,10 @@ a:hover {
   .header-nav-text-logo {
     display: none;
   }
+
+  .vertical-line {
+    display: none;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -849,8 +853,8 @@ h6, .h6 {
   font-size: 16px;
   color: #66615b;
 }
-.content-card{
-  margin-top:30px;    
+.content-card{ 
+  margin: 30px auto;   
 }
 a:hover, a:focus {
   text-decoration: none;
